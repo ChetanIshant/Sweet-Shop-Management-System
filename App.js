@@ -94,3 +94,7 @@ export default function App() {
     </div>
   );
 }
+
+
+/- contact if you have some other optimized code for the same: ishunara25@gmail.com
+
