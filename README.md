@@ -1,3 +1,3 @@
-## GitHub Achievement Progress
+## Pull Shark Progress
 
-- Working towards Pull Shark 🦈
+Second merged pull request.
