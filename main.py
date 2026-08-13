@@ -62,4 +62,9 @@ def restock_sweet_endpoint(sweet_id: int, quantity: int = 1, user=Depends(get_cu
     if not user.is_admin:
         raise HTTPException(status_code=403, detail="Admins only")
     return crud.restock_sweet(session, sweet_id, quantity)
-
+@app.delete("/api/sweets/{sweet_id}")
+def delete_sweet_endpoint(sweet_id: int, user=Depends(get_current_user), session=Depends(get_session)):
+    if not user.is_admin:
+        raise HTTPException(status_code=403, detail="Admins only")
+    crud.delete_sweet(session, sweet_id)
+    return {"ok": True}
